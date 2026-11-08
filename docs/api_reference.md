@@ -6,7 +6,7 @@ Every request must include an `Authorization: Bearer <token>` header. API tokens
 
 ## Rate limits
 
-Each API key is allowed to send 600 requests per minute across all endpoints. When the limit is exceeded the API responds with HTTP 429 and a `Retry-After` header.
+Each API key is allowed to send 1200 requests per minute across all endpoints. The limit is enforced by the edge gateway. When the limit is exceeded the API responds with HTTP 429 and a `Retry-After` header. Short bursts of up to 1800 requests are allowed for 10 seconds under the "burst smoothing" policy.
 
 ## Refunds
 
